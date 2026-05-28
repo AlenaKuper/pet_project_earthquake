@@ -5,7 +5,7 @@ from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from airflow.sensors.external_task import ExternalTaskSensor
 
 # Конфигурация DAG
-OWNER = "i.korsakov"
+OWNER = "o.krivopuskova"
 DAG_ID = "fct_avg_day_earthquake"
 
 # Используемые таблицы в DAG
@@ -25,7 +25,7 @@ SHORT_DESCRIPTION = "SHORT DESCRIPTION"
 
 args = {
     "owner": OWNER,
-    "start_date": pendulum.datetime(2025, 5, 1, tz="Europe/Moscow"),
+    "start_date": pendulum.datetime(2026, 5, 1, tz="Europe/Kyiv"),
     "catchup": True,
     "retries": 3,
     "retry_delay": pendulum.duration(hours=1),
