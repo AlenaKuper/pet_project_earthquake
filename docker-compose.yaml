@@ -117,6 +117,8 @@ services:
     container_name: metabase
     ports:
       - "3000:3000"
+    environment:
+      JAVA_TIMEZONE: Europe/Kyiv
 
   postgres:
     image: postgres:13
