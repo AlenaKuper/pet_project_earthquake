@@ -93,6 +93,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
+      PGTZ: Europe/Kyiv
     restart: always
     ports:
       - "5432:5432"
@@ -117,8 +118,6 @@ services:
     container_name: metabase
     ports:
       - "3000:3000"
-    environment:
-      JAVA_TIMEZONE: Europe/Kyiv
 
   postgres:
     image: postgres:13
